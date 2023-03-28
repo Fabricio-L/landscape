@@ -1,9 +1,10 @@
+import Layout from '../../components/Layout'
 import styles from '@/styles/Pokedex.module.css'
 
 export default function pokedex(){
   return (
-    <main className={styles.main}>
-        <h1>Next App</h1>
-      </main>
+    <Layout>
+      <h1>Pokedex</h1>
+    </Layout>
   )
 }
