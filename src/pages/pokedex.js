@@ -3,7 +3,7 @@ import styles from '@/styles/Pokedex.module.css'
 
 export default function pokedex(){
   return (
-    <Layout>
+    <Layout title='Pokedex'>
       <h1>Pokedex</h1>
     </Layout>
   )
