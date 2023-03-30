@@ -5,15 +5,15 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import Layout from '@/components/Layout'
 
 const schema = yup.object().shape({
-  nombre: yup.string().required('Por favor ingresa tu nombre'),
-  correo: yup
+  name: yup.string().required('Por favor ingresa tu name'),
+  mail: yup
     .string()
-    .email('Ingresa un correo electrónico válido')
-    .required('Por favor ingresa tu correo electrónico'),
-  telefono: yup.string(),
-  edad: yup
+    .email('Ingresa un mail electrónico válido')
+    .required('Por favor ingresa tu mail electrónico'),
+  phone: yup.string(),
+  age: yup
     .number()
-    .required('Por favor ingresa tu edad')
+    .required('Por favor ingresa tu age')
     .min(18, 'Debes ser mayor de 18 años'),
 })
 
@@ -33,50 +33,36 @@ export default function Home() {
   return (
     <Layout title="Form">
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <h1 className={styles.title}>Complete sus datos</h1>
         <div className={styles.field}>
-          <label htmlFor="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            {...register('nombre')}
-          />
-          {errors.nombre && (
-            <span className={styles.error}>{errors.nombre.message}</span>
+          <label htmlFor="name">Nombre</label>
+          <input type="text" id="name" name="name" {...register('name')} />
+          {errors.name && (
+            <span className={styles.error}>{errors.name.message}</span>
           )}
         </div>
 
         <div className={styles.field}>
-          <label htmlFor="correo">Correo electrónico</label>
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-            {...register('correo')}
-          />
-          {errors.correo && (
-            <span className={styles.error}>{errors.correo.message}</span>
+          <label htmlFor="mail">Correo</label>
+          <input type="email" id="mail" name="mail" {...register('mail')} />
+          {errors.mail && (
+            <span className={styles.error}>{errors.mail.message}</span>
           )}
         </div>
 
         <div className={styles.field}>
-          <label htmlFor="telefono">Teléfono</label>
-          <input
-            type="text"
-            id="telefono"
-            name="telefono"
-            {...register('telefono')}
-          />
-          {errors.telefono && (
-            <span className={styles.error}>{errors.telefono.message}</span>
+          <label htmlFor="phone">Teléfono</label>
+          <input type="text" id="phone" name="phone" {...register('phone')} />
+          {errors.phone && (
+            <span className={styles.error}>{errors.phone.message}</span>
           )}
         </div>
 
         <div className={styles.field}>
-          <label htmlFor="edad">Edad</label>
-          <input type="number" id="edad" name="edad" {...register('edad')} />
-          {errors.edad && (
-            <span className={styles.error}>{errors.edad.message}</span>
+          <label htmlFor="age">Edad</label>
+          <input type="number" id="age" name="age" {...register('age')} />
+          {errors.age && (
+            <span className={styles.error}>{errors.age.message}</span>
           )}
         </div>
 
