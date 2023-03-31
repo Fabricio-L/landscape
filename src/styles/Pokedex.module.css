@@ -7,3 +7,54 @@
   width: 1280px;
   margin: auto;
 }
+
+.section {
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.container {
+  padding: 3rem;
+}
+
+.container input {
+  height: 3rem;
+  padding: 0px 12px;
+  background-color: var(--background);
+  border: 1px solid #CFD3D5;
+  border-radius: 8px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px #dde2e6;
+  padding: 1rem;
+  text-transform: capitalize;
+  width: 20%;
+}
+
+@media (max-width: 480px) {
+  .section {
+    width: unset;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
