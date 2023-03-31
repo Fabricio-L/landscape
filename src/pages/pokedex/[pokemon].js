@@ -40,7 +40,7 @@ export async function getServerSideProps({ params }) {
   const { pokemon } = params
 
   // Fetch data
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/${pokemon}`)
   const data = await res.json()
 
   if (!data) return { props: { data: null } }

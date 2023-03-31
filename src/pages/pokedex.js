@@ -50,7 +50,7 @@ export default function pokemon({ data }) {
 export async function getStaticProps() {
   // Fetch data
   const res = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0`
+    `${process.env.REACT_APP_API_URL}?limit=10000&offset=0`
   )
   const data = await res.json()
 
