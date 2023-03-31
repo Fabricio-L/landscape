@@ -6,14 +6,10 @@ export default function Topbar() {
   const router = useRouter()
   const path = router.asPath
 
-  console.log(path)
-
   const links = {
     home: '/',
     pokedex: '/pokedex',
   }
-
-  console.log(path.split('/')[2])
 
   return (
     <section className={styles.section}>
