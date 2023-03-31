@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from './Layout.module.css'
+import Topbar from './Topbar'
 
 export default function Layout({ children, title }) {
   return (
@@ -15,7 +16,10 @@ export default function Layout({ children, title }) {
           href="https://img.icons8.com/color/48/null/pokeball--v1.png"
         />
       </Head>
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>
+        <Topbar />
+        {children}
+      </main>
     </>
   )
 }
