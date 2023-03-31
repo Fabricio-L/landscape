@@ -3,7 +3,7 @@ import Layout from '@/components/Layout'
 import styles from '@/styles/Pokedex.module.css'
 import Link from 'next/link'
 
-export default function pokemon({ data }) {
+export default function Pokemon({ data }) {
   const { results } = data
   const [filteredData, setFilteredData] = useState(results)
   const [wordEntered, setWordEntered] = useState('')

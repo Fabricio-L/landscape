@@ -3,7 +3,7 @@ import Layout from '@/components/Layout'
 import { IconPokeball, IconWeight, IconRuler2 } from '@tabler/icons-react'
 import styles from '@/styles/Pokemon.module.css'
 
-export default function pokemon({ data }) {
+export default function Pokemon({ data }) {
   return (
     <Layout title="Pokedex">
       <section className={styles.section}>
